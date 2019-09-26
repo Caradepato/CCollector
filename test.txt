@@ -1,3 +1,0 @@
-<contents>
-	<message>This is my message</message>
-</contents>
