@@ -4,6 +4,8 @@
 
 O CCollector (Comics Collector) sera uma ferramenta que permite gerir, de maneira fácil e intuitiva, uma colecção de bandas desenhadas.
 
+Tomas Martins e Carlos Vigario
+
 ## Ambito base
 
 1) Criar, modificar e gerir catálogos de bandas desenhadas.
