@@ -39,3 +39,14 @@ Criado por: Tomas Martins e Carlos Vigário
 4) Criar um sistema de gestão dos catálogos baseado no modelo wiki, em que sempre que um artigo for adicionado ou modificado, a base de utilizadores poderá votar na sua implementação.
 
 5) Um sistema de ranking que incrementa por cada troca concluída ou alteração de catálogo implementada para ajudar utilizadores verem quem é de confiança.
+
+
+## Outras aplicações com o mesmo objetivo
+
+### CollectorZ e Key Collector Comics
+
+São aplicações semelhantes aquele que nos propomos a criar, ambas têm como o seu core facilitar a gestão das coleções de bandas desenhadas.
+A nossa difere na questão da comunicação entre utilizadores e no permitir aos utilizadores inserirem novas bd´s as coleções.
+
+CollectorZ: https://www.collectorz.com/comic
+Key Collector Comics: https://wwww.keycollectorcomics.com
