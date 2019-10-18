@@ -16,26 +16,23 @@ CollectorZ: https://www.collectorz.com/comic
 Key Collector Comics: https://wwww.keycollectorcomics.com
 
 
-## Âmbito base
-O core da nossa aplicação é o de criar maior facilidade em gerir a coleção de bandas desenhadas.
-Para isso iremos necessitar das seguintes funcionalidades.
+## Scenario principal
+O utilizador abre a applicação e faz o log in. Depois entra na sua collecção de Tintin, e abre o item "Tintin e o tesouro do Rackham o Terrivel" e adiciona um exemplar novo. Escolhe a edição, em Portugues, do expresso, e escreve uma descrição curta da sua condição:
 
-1) Criar, modificar e gerir catálogos de bandas desenhadas.
-	Um exemplo de um catálogo seria as bandas desenhadas do Tintim, ou os de Spirou.
+"A condição é boa, mas a página 11 tem uma marca onde foi dobrada"
 
-2) Utilizando estes catálogos, permitirá o utilizador contabilizar os livros (e o numero de cada exemplar) que este têm em sua posse. 
-
-3) Ver informação sobre cada livro no catálogo incluindo: Autor(es), Artista(s), ano de publicação, título original, uma descrição curta e uma imagem da capa.
-
-Com estas funcionalidades é mais fácil o utilizador saber quantos exemplares de uma determinada banda desenhada o utilizador têm, como tambem poder visualizar quais as bandas desenhadas que lhe faltam.
-
+Ele volta para tras, e da uma olhada aos outros items. Agora só lhe falta "A ilha negra".
 
 ## Cenários secundários:
 
-### Adições aos features base
+### Comunicação entre utilizadores
 
-No primeiro cenário secundário queriamos permitir aos utilizadores adicionarem a edição e a editora as suas bandas desenhadas, para facilitar a navegação na nossa aplicação esta deve guardar qual foi a ultima janela onde estava o utilizador e guardar essa mesma janela para que seja apresentada assim que o utilizador volte a ligar a aplicação, isto facilita a navegação prevenindo que se perca alguma informação se a aplicação for fechada de forma voluntária ou involuntária. Como falado na contextualização um dos nossos objetivos é permitir que os utilizadores completem a sua coleção para isso queremos guardar a localização dos nosso utilizadores e permitir que um utilizador possa visualizar os utilizadores mais perto de si. Todos os utilizadores são diferentes e gostam de visualizar a sua coleção de diferentes formas por isso queremos permitir ao utilizador que organize a forma de visualizar a sua organização de forma diferente seja por ordem alfabética, data de publicação ou ordem de inserção.
+O utilizador dá uma olhada a sua collecção de tintim. Falta lhe "A ilha negra". Abre o item, e ve na liste de utilizadores que tem um duplo deste exemplar. Abre o primeiro - Escolhe não contactar-lo, este utilizador tem uma pontuação negativa. O segundo é ume escolha mais segura.
 
-### Comunicação entre utilizadores.
+Este tambem esta a faltar "Carvão no porão", e o utilizador tem duas exemplares desta banda desenhada. Escreve uma mensagem breve a propor a troca, e fecha a aplicação.
 
-No segundo cenário principal está mais focado na interação entre utilizadores na aplicação fazendo com que cada utilizador possa ver a coleção de outro e verificar quais as bandas desenhadas faltam ao outro utilizador para facilitar as trocas, para facilitar ainda mais queremos permitir aos nossos utilizadores que enviem mensagem entre si, para que um utilizador possa ver a coleção de outro e enviar mensagem a outro decidimos que cada utilizador deve ter a sua página de perfil onde permite que outros utilizadores vejam as suas informações tais como, localização, coleção, rank e possa enviar mensagem. Rank é uma forma de avaliar os utilizadores para que seja seguro fazer trocas, ou seja cada troca bem sucedida ou crie uma alteração a base que seja aceite por outros aumenta o seu rank fazendo com que outros utilizadores possam confiar nesse utilizadores que tenham maiores rank's. A alteração a base de dados feita pelos utilizadores permite com que seja mais rápida a atualização da base dados, mas para que a alteração seja feita, esta só pode ser feita se os outros utilizadores validarem a proposta feita pelo utilizador.
+### Edição do catalogo
+
+O utilizador abre a applicação. Vai adicionar um novo exemplar de Blacksad. Quando vai para addicionar-lo, nota que não existe este edição no catalago, portanto adiciona-lo antes de adicionar o seu exemplar.
+
+Uma semana depois ao entrar na applicação o utilizador nota que tem ganhado uma reputação - A addição do exemplar foi bem recebida pela communidade.
