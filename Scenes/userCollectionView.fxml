@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="110.0" text="Back">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </Button>
+            <Label fx:id="userCatalogueName" prefHeight="34.0" prefWidth="207.0">
+               <HBox.margin>
+                  <Insets left="90.0" top="30.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" text="Edit Catalogue">
+               <HBox.margin>
+                  <Insets left="100.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="bookImage1" fitHeight="101.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox prefHeight="101.0" prefWidth="455.0">
+                     <children>
+                        <Label fx:id="bookTitle1" prefHeight="36.0" prefWidth="460.0" />
+                        <TextArea fx:id="bookDescription1" prefHeight="66.0" prefWidth="445.0" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="numberBooks1" prefHeight="101.0" prefWidth="64.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="bookImage2" fitHeight="101.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox prefHeight="101.0" prefWidth="455.0">
+                     <children>
+                        <Label fx:id="bookTitle2" prefHeight="36.0" prefWidth="460.0" />
+                        <TextArea fx:id="bookDescription2" prefHeight="66.0" prefWidth="462.0" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="numberBooks2" prefHeight="101.0" prefWidth="64.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="bookImage3" fitHeight="101.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox prefHeight="101.0" prefWidth="455.0">
+                     <children>
+                        <Label fx:id="bookTitle3" prefHeight="36.0" prefWidth="460.0" />
+                        <TextArea fx:id="bookDescription3" prefHeight="62.0" prefWidth="445.0" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="numberBooks3" prefHeight="101.0" prefWidth="64.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <ScrollBar orientation="VERTICAL" prefHeight="390.0" prefWidth="14.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
