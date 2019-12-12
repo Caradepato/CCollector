@@ -17,7 +17,7 @@ Key Collector Comics: https://wwww.keycollectorcomics.com
 
 
 ## Cenário principal
-O utilizador ao abrir a aplicação e ao realizar o seu login é levado para a página das coleções onde pode em seguida escolher qual a coleção que deseja visualizar, ao selecionar o nome da coleção, a aplicação abre uma nova janela que mostra o interior da coleção, que contêm os livros todos da coleção, se o utilizador não tiver algum livro este aparece com o numero 0 na coluna "Quantity". Se o utilizador comprar um livro novo e o quiser adicionar a sua coleção pode carregar no botão que diz "" e em seguida é levado para a janela onde deve introduzir tudo o que precisa para adicionar um livro.
+O utilizador ao abrir a aplicação e ao realizar o seu login é levado para a página das coleções onde pode em seguida escolher qual a coleção que deseja visualizar, ao selecionar o nome da coleção, a aplicação abre uma nova janela que mostra o interior da coleção, que contêm os livros todos da coleção, se o utilizador não tiver algum livro este aparece com o numero 0 na coluna "Quantity".
 
 ## Cenários secundários:
 
