@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="299.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="533.0">
+               <children>
+                  <Label fx:id="otherUserName" prefHeight="47.0" prefWidth="236.0">
+                     <VBox.margin>
+                        <Insets left="150.0" top="50.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Log Out">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="250.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="300.0" prefWidth="298.0">
+               <children>
+                  <Label prefHeight="42.0" prefWidth="272.0" text="Books you need:" />
+                  <HBox prefHeight="129.0" prefWidth="293.0">
+                     <children>
+                        <ImageView fx:id="bookImage1" fitHeight="129.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextArea fx:id="bookDesc1" prefHeight="129.0" prefWidth="180.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="181.0" prefWidth="302.0">
+               <children>
+                  <HBox prefHeight="128.0" prefWidth="215.0">
+                     <children>
+                        <ImageView fx:id="bookImage2" fitHeight="129.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="42.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <TextArea fx:id="bookDesc2" prefHeight="129.0" prefWidth="204.0">
+                           <HBox.margin>
+                              <Insets top="42.0" />
+                           </HBox.margin>
+                        </TextArea>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="125.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollBar fx:id="scrollBooks" prefHeight="22.0" prefWidth="600.0" />
+            <HBox prefHeight="21.0" prefWidth="600.0">
+               <children>
+                  <Label text="Messages">
+                     <HBox.margin>
+                        <Insets left="290.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="otherMessages" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

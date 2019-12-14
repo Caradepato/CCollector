@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Tomas
- *
- */
-module collector {
-}
