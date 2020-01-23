@@ -3,7 +3,7 @@ package pt.iade.cCollector.models;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import pt.iade.models.dao.CCollectorDao;
+import pt.iade.models.dao.CollectionDao;
 
 public class User {
 	private String email;
@@ -15,7 +15,7 @@ public class User {
 		this.email = email;
 		this.reputation = 0;
 		this.messages = FXCollections.observableArrayList();
-		this.collections = CCollectorDao.getCollections(email);
+		this.collections = CollectionDao.getCollections(email);
 	}
 	
 	public ObservableList<Collection> getCollections(){
@@ -29,7 +29,7 @@ public class User {
 	/** Synchronizes the collections with the ones currently available in the database
 	 * used when a new collection is added by the user **/
 	public void setCollections() {
-		collections = CCollectorDao.getCollections(email);
+		collections = CollectionDao.getCollections(email);
 	}
 	
 }

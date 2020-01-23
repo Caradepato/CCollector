@@ -1,7 +1,7 @@
 package pt.iade.cCollector.models;
 
 import javafx.collections.ObservableList;
-import pt.iade.models.dao.CCollectorDao;
+import pt.iade.models.dao.ItemDao;
 
 public class Item {
 	String name;
@@ -10,12 +10,14 @@ public class Item {
 	ObservableList<userBook> userBooks;
 	String bookSize;
 	int itemId;	
+	int collectionId;
 	public Item(String name, String description, String category, int id, int collectionId ) {
 		this.name = name;
 		this.description = description;
 		this.category = category;
 		this.itemId = id;
-		this.userBooks = CCollectorDao.getUserBooksInItem(id, collectionId);
+		this.collectionId = collectionId;
+		this.userBooks = ItemDao.getUserBooksInItem(id, collectionId);
 	}
 	
 	public String getName() {

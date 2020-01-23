@@ -21,7 +21,8 @@ public class UserCollectionViewController {
 	TableColumn<String, Collection> collectionColumn = new TableColumn<>("Name");
 	@FXML
 	TableColumn<String, Collection> descriptionColumn = new TableColumn<>("Description");	
-	
+	@FXML
+	Button addCollection;	
 	
 	
 	public UserCollectionViewController(User user) {
@@ -37,7 +38,7 @@ public class UserCollectionViewController {
 		descriptionColumn.setCellValueFactory(new PropertyValueFactory<String, Collection>("catalogueDescription"));
 		collectionv.setItems(collections);
 		
-		/** If the users have collections, allows them to select one to view in the browse collection view
+	   	/** If the users have collections, allows them to select one to view in the browse collection view
 		 * if the user doesn't, it opens the choose collection view so that the user can choose one **/
 		collectionv.setOnMouseClicked(
 				(event)->{ 
@@ -55,6 +56,10 @@ public class UserCollectionViewController {
 	
 	public void backClick() {
 		WindowManager.backToMainWindow();
+	}
+	
+	public void addCollection() {
+		WindowManager.openChooseCollectionView(user);
 	}
 
 }

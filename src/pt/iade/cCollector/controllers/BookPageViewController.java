@@ -2,7 +2,10 @@ package pt.iade.cCollector.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
@@ -16,15 +19,20 @@ import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.User;
 import pt.iade.cCollector.models.userBook;
-import pt.iade.models.dao.CCollectorDao;
+import pt.iade.models.dao.ItemDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
+import java.util.Optional;
+
+import javafx.beans.value.*;
 
 public class BookPageViewController {
 
 	private User user;
 	private Item item;
 	private Collection collection;
+	int bookIndex;
 	
     @FXML
     private TextFlow itemName;
@@ -34,6 +42,12 @@ public class BookPageViewController {
     
     @FXML
     private Button backButton;
+    
+    @FXML
+    private Button addBook;
+    
+    @FXML
+    private Button removeBook;
 
     @FXML
     private ImageView bookImage;
@@ -54,6 +68,7 @@ public class BookPageViewController {
 		this.user = user;
 		this.item = item;
 		this.collection = collection;
+		bookIndex = 0;
 	}
 	
 
@@ -63,7 +78,30 @@ public class BookPageViewController {
 	 */
     @FXML
     public void backClick(ActionEvent event) {
+		user.setCollections();
     	WindowManager.openBrowseCollectionView(user, collection);
+    }
+    
+    /**
+     * Adds a new copy of a userBook 
+     */
+    @FXML
+    public void addBook() {
+    	WindowManager.openNewBookView(user, item, collection);
+    }
+    
+    @FXML
+    public void removeBook() {
+    	
+		Alert confirm = new Alert(AlertType.CONFIRMATION);
+		confirm.setTitle("Warning");
+		confirm.setHeaderText("Confirmation");
+		confirm.setContentText("Are you sure you want to remove this book? ");
+		Optional<ButtonType> result = confirm.showAndWait();
+		
+		if (result.get() == ButtonType.OK)
+			ItemDao.archiveBook(item.getUserBooks().get(bookIndex));
+		
     }
     
     /** Initializes the scene**/
@@ -85,7 +123,7 @@ public class BookPageViewController {
     	
     	/** set users own **/
     	
-    	usersOwn.setItems(CCollectorDao.getUsersWithBook(item.getItemId(), user.getEmail()));
+    	usersOwn.setItems(ItemDao.getUsersWithBook(item.getItemId(), user.getEmail()));
     	
     	/** set book number **/
     	
@@ -107,8 +145,24 @@ public class BookPageViewController {
     			bookNumbers.add(item.getUserBooks().get(i).getSelectorText());
     		}
     		selectBook.setItems(bookNumbers);}
+    	
+    	
 
-    }
+    
+    
+    /** Defines the functionality of the choice box
+     * Changes description to that of the chosen userBook
+     */
+    
+    selectBook.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+        public void changed(ObservableValue ov, Number number,  Number new_value) 
+        { 
+           copyDescription.getChildren().clear();
+           bookIndex = new_value.intValue();
+           setDescriptionBoxText(item.getUserBooks().get(new_value.intValue()));
+        } 
+    });
+  }
     
     /** Sets the description of the users copy in the correct format and places it in the textflow
      * 
@@ -116,8 +170,8 @@ public class BookPageViewController {
      */
     
     private void setDescriptionBoxText(userBook userbook){
-    	Text descriptionText = new Text("Condition: " + userbook.getDescription());
-    	Text publisherText = new Text("Publisher: " + userbook.getPublisher());
+    	Text descriptionText = new Text("Condition: " + userbook.getDescription() + "\r\n");
+    	Text publisherText = new Text("Publisher: " + userbook.getPublisher() + "\r\n");
     	Text languageText = new Text("Language: " + userbook.getLanguage());
 		copyDescription.getChildren().add(descriptionText);
 		copyDescription.getChildren().add(publisherText);

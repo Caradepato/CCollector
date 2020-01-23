@@ -12,6 +12,7 @@ import pt.iade.cCollector.controllers.ChooseCollectionViewController;
 import pt.iade.cCollector.controllers.CreateCollectionViewController;
 import pt.iade.cCollector.controllers.LoginController;
 import pt.iade.cCollector.controllers.UserCollectionViewController;
+import pt.iade.cCollector.controllers.addCopyController;
 import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.User;
@@ -150,6 +151,23 @@ public class WindowManager {
 			secondaryStage = new Stage();
 			secondaryStage.setScene(scene);
 			secondaryStage.show();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void openNewBookView(User user, Item item, Collection collection) {
+		try {
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("scenes/newBookView.fxml"));
+			loader.setController(new addCopyController(user, item, collection));
+			Pane root;
+			root = loader.load();
+			scene = new Scene(root);
+			secondaryStage.close();
+			primaryStage = new Stage();
+			primaryStage.setScene(scene);
+			primaryStage.show();
 		}
 		catch (IOException e) {
 			e.printStackTrace();

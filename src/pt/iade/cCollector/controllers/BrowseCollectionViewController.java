@@ -20,6 +20,9 @@ public class BrowseCollectionViewController {
 	TableView<Item> itemTable = new TableView<Item>();
 	@FXML
 	Button Back;
+	@FXML
+	Button addCollection;
+
 
 	@FXML
 	TableColumn<String, Item> column1;	
@@ -29,12 +32,12 @@ public class BrowseCollectionViewController {
 	TableColumn<String, Item> column3;	
 	@FXML
 	TableColumn<Integer, Item> column4;
-	
 
 	
 	public BrowseCollectionViewController(User user, Collection collection) {
 		this.user = user;
 		this.collection = collection;
+		
 	}
 
 	public void initialize() {
@@ -59,4 +62,5 @@ public class BrowseCollectionViewController {
 	public void backClick() {
 		WindowManager.openUserCollectionView(user);
 	}
+
 }

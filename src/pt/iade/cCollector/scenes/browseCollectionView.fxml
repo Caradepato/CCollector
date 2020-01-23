@@ -43,11 +43,6 @@
                   <TableColumn fx:id="column4" prefWidth="79.0" text="Quantity" />
               </columns>
             </TableView>
-            <Button fx:id="addCollection" mnemonicParsing="false" text="+ Add new Collection">
-               <VBox.margin>
-                  <Insets left="250.0" top="10.0" />
-               </VBox.margin>
-            </Button>
          </children>
       </VBox>
    </center>

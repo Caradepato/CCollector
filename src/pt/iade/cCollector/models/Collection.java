@@ -2,6 +2,7 @@ package pt.iade.cCollector.models;
 
 import javafx.collections.ObservableList;
 import pt.iade.models.dao.CCollectorDao;
+import pt.iade.models.dao.ItemDao;
 
 public class Collection {
 
@@ -17,13 +18,14 @@ public class Collection {
 	 * @param catalogueDescription
 	 */
 	public Collection(int collectionId, String catalogueName, String catalogueDescription) {
+		this.id = collectionId;
 		this.catalogueName = catalogueName;
 		this.catalogueDescription = catalogueDescription;
-		this.items = CCollectorDao.getItemsFromCollectionId(collectionId);
+		this.items = ItemDao.getItemsFromCollectionId(collectionId);
 
 	}
 	
-	/** This constructor builds the instances that will be chone in the choose collection view
+	/** This constructor builds the instances that will be shown in the choose collection view
 	 * 
 	 * @param catalogueName
 	 * @param catalogueDescription

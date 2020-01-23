@@ -54,7 +54,21 @@
                   <VBox prefHeight="183.0" prefWidth="401.0">
                      <children>
                         <Label prefHeight="17.0" prefWidth="290.0" text="Description of the copy" />
-                        <TextFlow fx:id="copyDescription" prefHeight="200.0" prefWidth="200.0" />
+                        <TextFlow fx:id="copyDescription" prefHeight="129.0" prefWidth="401.0" />
+                        <HBox prefHeight="39.0" prefWidth="401.0">
+                           <children>
+                              <Button fx:id="addBook" mnemonicParsing="false" onAction="#addBook" text="Add">
+                                 <HBox.margin>
+                                    <Insets left="270.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="removeBook" mnemonicParsing="false" onAction="#removeBook" text="Remove">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                </children>
