@@ -27,6 +27,10 @@ import java.util.Optional;
 
 import javafx.beans.value.*;
 
+/**
+ * Controls the book view
+ *  **/
+
 public class BookPageViewController {
 
 	private User user;
@@ -89,7 +93,9 @@ public class BookPageViewController {
     public void addBook() {
     	WindowManager.openNewBookView(user, item, collection);
     }
-    
+    /**
+     * Removes an owned copy of the book selected by the choicebox.
+     */
     @FXML
     public void removeBook() {
     	
@@ -103,8 +109,14 @@ public class BookPageViewController {
 			ItemDao.archiveBook(item.getUserBooks().get(bookIndex));
 		
     }
-    
-    /** Initializes the scene**/
+    /** this initialization does the following tasks:
+     * Sets the item name;
+     * Sets the item description;
+     * Fetches the users that own more then one copy of this book;
+     * Sets how many books the logged user has;
+     * Sets the description of the currently selected userbook (by default the book with the lowest ID)
+     * Defines the functionality of the choicebox (populates it with all the copies that the user owns).
+     */
     public void initialize() {
     	
     	/** set item name **/
@@ -164,7 +176,7 @@ public class BookPageViewController {
     });
   }
     
-    /** Sets the description of the users copy in the correct format and places it in the textflow
+    /** Sets the description of the users copy in the correct format and places it in the description text flow
      * 
      * @param userbook
      */

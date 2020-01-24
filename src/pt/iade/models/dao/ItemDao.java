@@ -13,6 +13,8 @@ import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.MysqlConnection;
 import pt.iade.cCollector.models.userBook;
 
+/** this class handles all traffic to the database that has to do with books **/
+
 public class ItemDao {
 	public static Connection connection; 
 	

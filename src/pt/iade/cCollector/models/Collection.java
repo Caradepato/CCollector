@@ -4,6 +4,10 @@ import javafx.collections.ObservableList;
 import pt.iade.models.dao.CCollectorDao;
 import pt.iade.models.dao.ItemDao;
 
+/** This class models a collection for two purposes:
+ * 1. To model the logged users collections.
+ * 2. To allow a user to choose a new collection. **/
+
 public class Collection {
 
 	private ObservableList<Item> items;

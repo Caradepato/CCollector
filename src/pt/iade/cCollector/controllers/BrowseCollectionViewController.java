@@ -10,7 +10,10 @@ import pt.iade.cCollector.WindowManager;
 import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.User;
-
+/** controls the browse collection view
+ * 
+ * That is, it controls an overview of all the items in a chosen collection.
+ */
 public class BrowseCollectionViewController {
 
 	Collection collection;
@@ -40,6 +43,11 @@ public class BrowseCollectionViewController {
 		
 	}
 
+	/** this initializes the following things:
+	 * The table view showing the name, description and category of a book as well as how many copies the user owns;
+	 * 
+	 * Listens for the event which selects one of the books in the list.
+	 */
 	public void initialize() {
 		/** Setting up the table view with information about items **/
 		column1.setCellValueFactory(new PropertyValueFactory<String, Item>("name"));

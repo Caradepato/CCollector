@@ -4,7 +4,12 @@ import javafx.application.*;
 import javafx.stage.*;
 import pt.iade.cCollector.WindowManager;
 
-
+/**
+ * Main class.
+ * 
+ * @author Tomas Martins and Carlos Vigário
+ *
+ */
 public class Main extends Application {
 
 	@Override	

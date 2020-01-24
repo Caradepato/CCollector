@@ -9,9 +9,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import pt.iade.cCollector.WindowManager;
 import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.User;
-import pt.iade.models.dao.CCollectorDao;
 import pt.iade.models.dao.CollectionDao;
-import pt.iade.models.dao.ItemDao;
+
+/** this controls the choose collection screen 
+ * This screen lets the user add a new collection to their collections.**/
 
 public class ChooseCollectionViewController {
 		
@@ -30,7 +31,8 @@ public class ChooseCollectionViewController {
 		this.user = user;
 	}
 
-
+	/** Initializes the following things:
+	 * A list of all the collections the user does not have **/
 	public void initialize() {
 		/** Sets up the list of all catalogs by fetching information from the database**/
 		ObservableList<Collection> collections = CollectionDao.getAllCatalogues(user);
@@ -47,6 +49,8 @@ public class ChooseCollectionViewController {
 				WindowManager.openUserCollectionView(user);
 				});
 	}
+	
+	/** returns to the user collection view **/
 	
 	public void backClick() {
 		WindowManager.openUserCollectionView(user);

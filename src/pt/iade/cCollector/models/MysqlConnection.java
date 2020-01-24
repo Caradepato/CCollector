@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/** handles the connection to the database **/
+
 public class MysqlConnection {
 	/*private static final String URL = "jdbc:mysql://remotemysql.com:3306/Gtwkt5USSe?useSSL=false";
 	private static final String USER = "Gtwkt5USSe";

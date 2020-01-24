@@ -10,6 +10,9 @@ import pt.iade.cCollector.models.Collection;
 import javafx.scene.control.cell.PropertyValueFactory;
 import pt.iade.cCollector.models.User;
 
+/** This controls the user collection view screen
+ * this screen shows the user all of their collections and allows them to choose one to see in more detail **/
+
 public class UserCollectionViewController {
 	User user;
 
@@ -57,6 +60,10 @@ public class UserCollectionViewController {
 	public void backClick() {
 		WindowManager.backToMainWindow();
 	}
+	
+	/** takes you to the add Collection screen
+	 * allowing the user to add a new collection.
+	 */
 	
 	public void addCollection() {
 		WindowManager.openChooseCollectionView(user);

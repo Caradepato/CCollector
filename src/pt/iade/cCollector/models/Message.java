@@ -2,6 +2,7 @@ package pt.iade.cCollector.models;
 
 import java.util.Date;
 
+/** As of yet unused **/
 public class Message {
 	private String from;
 	private String to;

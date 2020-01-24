@@ -14,6 +14,8 @@ import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.User;
 import pt.iade.models.dao.ItemDao;
 
+/** Controls the add new copy screen**/
+
 public class addCopyController {
 
     @FXML
@@ -33,6 +35,7 @@ public class addCopyController {
     private Collection collection;
     private ObservableList<Edition> editions;
     
+    
     public addCopyController(User user, Item item, Collection collection) {
     	this.user = user;
     	this.item = item;
@@ -40,10 +43,19 @@ public class addCopyController {
     	editions = ItemDao.getEditions(item.getItemId());
     }
     
+    /**
+     * Defines the choicebox with the editions of the seleted book.
+     */
+    
     public void initialize() {
     	choiceBox.setItems(editions);
     	
     }
+    
+    /**
+     * Returns to the previous screen (the book view)
+     * @param event
+     */
 
     @FXML
     void backClick(ActionEvent event) {
@@ -55,7 +67,7 @@ public class addCopyController {
 
     }
 
-    /** Item is added to collection and user returns to the book view
+    /** Item is added to collection, the users collections are refreshed and returns to the book view
      * 
      * @param event
      */

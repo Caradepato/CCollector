@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import pt.iade.cCollector.models.MysqlConnection;
 
+/** This Dao manages all database traffic about the users details **/
+
 public class CCollectorDao {
 	
 	private static java.sql.Connection connection;

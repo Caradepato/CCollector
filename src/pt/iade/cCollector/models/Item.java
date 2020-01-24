@@ -3,6 +3,7 @@ package pt.iade.cCollector.models;
 import javafx.collections.ObservableList;
 import pt.iade.models.dao.ItemDao;
 
+/** Models a particular comic book as well as containing a list of the individual copies a user owns **/
 public class Item {
 	String name;
 	String description;

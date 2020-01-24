@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 import pt.iade.cCollector.WindowManager;
 import pt.iade.cCollector.models.User;
 import pt.iade.models.dao.CCollectorDao;
+
+/** This controls the log in screen**/
 public class LoginController {
 
 	@FXML

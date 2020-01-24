@@ -1,5 +1,7 @@
 package pt.iade.cCollector.models;
 
+/** This class models the editions that a book has. **/
+
 public class Edition {
 
 	private String publisher;
@@ -29,6 +31,10 @@ public class Edition {
 	public int getId() {
 		return id;
 	}
+	
+	/**
+	 * Returns a string for the purpose of populating the choice box that lists the editions that a user may choose for a new book
+	 */
 	
 	public String toString() {
 		return publisher + " " + language + " " + publicationYear;

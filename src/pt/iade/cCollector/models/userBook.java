@@ -1,5 +1,7 @@
 package pt.iade.cCollector.models;
 
+/** models the individual copy of a book that the user hase **/
+
 public class userBook {
 	private String description;
 	private String publisher;

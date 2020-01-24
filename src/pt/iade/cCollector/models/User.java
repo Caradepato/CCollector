@@ -5,6 +5,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pt.iade.models.dao.CollectionDao;
 
+/** models both the logged user as well as any other users the logged user might interact with. **/
+
 public class User {
 	private String email;
 	private int reputation;

@@ -10,6 +10,8 @@ import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.MysqlConnection;
 import pt.iade.cCollector.models.User;
 
+/** This class handles information about collections and catalogues **/
+
 public class CollectionDao {
 	
 	static Connection connection;

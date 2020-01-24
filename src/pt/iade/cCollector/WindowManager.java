@@ -17,7 +17,9 @@ import pt.iade.cCollector.models.Collection;
 import pt.iade.cCollector.models.Item;
 import pt.iade.cCollector.models.User;
 
-
+/** 
+ * Handles the changes in viewed screen.
+ * **/
 public class WindowManager {
 
 	private static Stage primaryStage;
